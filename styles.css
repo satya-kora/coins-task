@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    height: calc(100vh - 60px); /* Adjust based on header height */
+    padding: 20px;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+}
+
+#search {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Position directly below the input field */
+    left: 0;
+    right: 0;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: #fff;
+}
+
+#suggestions li:hover {
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+#slider {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none; /* Hide slider by default */
+}
+
+#slider.visible {
+    display: block; /* Show slider when it has the 'visible' class */
+}
+
+#coin-details h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+#coin-details p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+#coin-details a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#coin-details a:hover {
+    text-decoration: underline;
+}
